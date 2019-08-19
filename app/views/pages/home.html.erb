@@ -8,7 +8,7 @@
       <%= simple_form_for("") do |f| %>
         <%= f.input :ville %>
         <%= f.input :date, as: :date %>
-        <%= f.input :genre, collection: ["Homme", "Femme"] %>
+        <%= f.input :genre, include_blank: "Choisir", collection: ["Homme", "Femme"] %>
         <%= f.button :submit, "C'est parti", class: "btn-principal" %>
       <% end %>
 
