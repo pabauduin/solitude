@@ -4,17 +4,23 @@
   background-size: cover;
   background-position:center;
   display: flex;
-  height: 100%;
   padding-top:50px;
+  height: 100vh;
 }
 
-// home css config for tablet & desktop
-@media screen and (min-width: 501px) {
+// home specific css config for desktop
+@media screen and (min-width: 721px) {
   .banner .container {
     margin-left: 50px;
   }
   .banner {
     align-items: center;
-    height: 100vh;
+  }
+}
+
+// home specific css config for mobile
+@media screen and (max-width: 720px) {
+  .banner {
+    background-image:none;
   }
 }
