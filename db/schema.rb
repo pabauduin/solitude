@@ -10,9 +10,54 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2019_08_19_122920) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "bookings", force: :cascade do |t|
+    t.date "booking_date"
+    t.date "day_use_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.bigint "escort_id"
+    t.index ["escort_id"], name: "index_bookings_on_escort_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
+
+  create_table "escorts", force: :cascade do |t|
+    t.string "name"
+    t.string "age"
+    t.string "size"
+    t.string "type"
+    t.string "available_dates"
+    t.integer "price_per_day"
+    t.string "city"
+    t.string "hair_color"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_escorts_on_user_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "email_address"
+    t.string "city"
+    t.string "user_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  add_foreign_key "bookings", "escorts"
+  add_foreign_key "bookings", "users"
+  add_foreign_key "escorts", "users"
 end
