@@ -1,0 +1,12 @@
+.banner {
+  height: 100vh;
+  background-image: asset-url("bg-home.jpg");
+  background-size: cover;
+  background-position:center;
+  display: flex;
+  align-items: center;
+}
+
+.banner .container {
+  margin-left: 200px;
+}

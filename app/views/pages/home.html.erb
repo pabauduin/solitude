@@ -1,2 +1,17 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner">
+  <div class="container">
+    <div class="logo-white">
+      <%= image_tag "logo-white.svg", alt: "logo solitude white" %>
+    </div>
+    <div class="card-home">
+      <h1>Trouvez le buddy idéal pour votre prochain événement.</h1>
+      <%= simple_form_for("") do |f| %>
+        <%= f.input :ville %>
+        <%= f.input :date, as: :date %>
+        <%= f.input :genre, collection: ["Homme", "Femme"] %>
+        <%= f.button :submit, "C'est parti", class: "btn-principal" %>
+      <% end %>
+
+    </div>
+  </div>
+</div>
