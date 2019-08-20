@@ -16,7 +16,7 @@ class EscortsController < ApplicationController
     if @escort.save
       redirect_to @escort
     else
-      render new
+      render :new
     end
   end
 
