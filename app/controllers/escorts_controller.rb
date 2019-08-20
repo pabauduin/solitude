@@ -12,7 +12,7 @@ class EscortsController < ApplicationController
   end
 
   def create
-    @escort = Escort.new(params[:escort_params])
+    @escort = Escort.new(escort_params)
     if @escort.save
       redirect_to @escort
     else
