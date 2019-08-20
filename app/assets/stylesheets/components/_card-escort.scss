@@ -1,0 +1,72 @@
+.card-escort {
+  background: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  position:relative;
+  height: 400px;
+  margin-bottom:30px;
+}
+
+.card-escort .price {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  background-color: $darkpurple;
+  right: 20px;
+  top: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;;
+  color:white;
+  font-size:22px;
+}
+
+.card-escort .face {
+  background-image: asset-url('mickael.png');
+  background-position: top;
+  background-size:cover;
+  height: 250px;
+  border-radius: 10px 10px 0 0;
+  position:relative;
+}
+
+.card-escort .face .infos {
+  position:absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.card-escort .face .infos #name, #age, #city {
+  color:white;
+}
+
+.card-escort #name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.card-escort .content {
+  padding: 20px 20px;
+  height: 150px;
+}
+
+.card-escort .content .configs {
+  display: flex;
+  align-items: flex-start;
+}
+
+.card-escort .content .config {
+  padding: 3px 8px;
+  border-radius: 5px;
+  background-color: $gray;
+  color: $darkgray;
+  margin: 0 10px;
+  font-size: 12px;
+}
+
+.card-escort .content #description {
+  font-size:14px;
+  margin-top: 20px;
+}
+
