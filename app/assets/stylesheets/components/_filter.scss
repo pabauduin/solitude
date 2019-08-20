@@ -1,0 +1,18 @@
+.filter {
+  background-color: $darkgray;
+}
+
+.filter .form-control {
+  background-color: rgba(0,0,0, 0.3);
+
+  height: 40px;
+  font-size: 12px;
+  color: white;
+  border: none;
+}
+
+
+.filter .form-control::-webkit-input-placeholder {
+  color: white !important;
+
+}

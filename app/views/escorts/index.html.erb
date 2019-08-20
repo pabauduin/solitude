@@ -1,3 +1,45 @@
-<h1>Welcome</h1>
+<div class="container-full">
 
-<%= link_to 'Find a person', controller: "escorts", action: "new" %>
+<div class="row ">
+
+  <div class="col-3">
+    <%= simple_form_for @escort, url: escorts_path, method: :get, html: { class: "filter"} do |f| %>
+        <%= f.input :age, placeholder: "Age",  class: "filter-input", label:false %>
+        <%= f.input :size, placeholder: "Taille (cm)", class: "filter-input", label:false %>
+        <%= f.input :origin, collection: Escort::AUTHORIZED_ORIGIN,  class: "filter-input", label:false %>
+        <%= f.input :available_dates, placeholder: "Disponibilité",  class: "filter-input", label:false %>
+        <%= f.input :city, placeholder: "Ville",  class: "filter-input", label:false %>
+        <%= f.input :gender, include_blank: "Genre", collection: ["Homme", "Femme"], class: "filter-input", label:false %>
+        <%=  f.button :submit, value: "Actualiser", class: "btn-principal" %>
+    <% end %>
+  </div>
+
+
+
+<% @escorts.each do |escort| %>
+  <div class="col-3">
+    <%= link_to escort_path(escort) do %>
+    <div class="card-escort">
+      <div class="face" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.6)),url('<%= cl_image_path escort.photo, :cloud_name => "dacmjlcwx" %>')">
+        <div class="infos">
+          <div id="name"><%= escort.name.capitalize %></div>
+          <div id="age"><%= escort.age.capitalize %> ans</div>
+          <div id="city"><%= escort.city.capitalize %></div>
+        </div>
+      </div>
+      <div class="price"><%= escort.price_per_day %> €<div style="font-size:12px; color:white;"> /jour</div></div>
+      <div class="content">
+      <div class="configs">
+        <div class="config"><%= escort.size.capitalize %>cm</div>
+        <div class="config"><%= escort.origin.capitalize %></div>
+        <div class="config"><%= escort.hair_color.capitalize %></div>
+      </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+<% end %>
+</div>
+</div>
+</div>
+<% console %>

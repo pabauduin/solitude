@@ -1,0 +1,25 @@
+<div class="container">
+<div class="row">
+<% @escorts.each do |escort| %>
+  <div class="col-12 col-md-6 col-lg-4">
+    <div class="card-escort">
+      <div class="face" style="">
+        <div class="infos">
+          <div id="name"><%= escort.name.capitalize %></div>
+          <div id="age"><%= escort.age.capitalize %> ans</div>
+          <div id="city"><%= escort.city.capitalize %></div>
+        </div>
+      </div>
+      <div class="price"><%= escort.price_per_day %> €<div style="font-size:12px; color:white;"> /jour</div></div>
+      <div class="content">
+      <div class="configs">
+        <div class="config"><%= escort.size.capitalize %>cm</div>
+        <div class="config"><%= escort.origin.capitalize %></div>
+        <div class="config"><%= escort.hair_color.capitalize %></div>
+      </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+</div>
+</div>
