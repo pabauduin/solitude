@@ -2,10 +2,10 @@
   <div class="container">
     <div class="card-home">
       <h1>Trouvez le buddy idéal pour votre prochain événement.</h1>
-      <%= simple_form_for("", {:method => 'get'}) do |f| %>
-        <%= f.input :city, as: :ville, value: params[:city]%>
-        <%= f.input :date, as: :date, value: params[:search] %>
-        <%= f.input :genre, as: :genre, include_blank: "Choisir", collection: ["Homme", "Femme"], value: params[:genre] %>
+      <%= simple_form_for :search, url: escorts_path, method: :get do |f| %>
+        <%= f.input :city, value: params[:city]%>
+        <%= f.input :date, as: :date, order: [:day, :month, :year], value: params[:search] %>
+        <%= f.input :genre, include_blank: "Choisir", collection: ["Homme", "Femme"], value: params[:genre] %>
         <%= f.button :submit, "C'est parti", class: "btn-principal" %>
       <% end %>
     </div>
