@@ -1,14 +1,33 @@
 class EscortsController < ApplicationController
   def index
-    # @price_range = params[:search][:price_per_day].split('..').inject { |s,e| s.to_i..e.to_i }
 
-    @escorts = Escort.where(city: params[:search][:city].capitalize,
-                            gender: params[:search][:gender].capitalize)
-                            # age: params[:search][:age],
-                            # size: params[:search][:size],
-                            # available_dates: params[:search][:available_dates],
-                            # price_per_day: @price_range)
-  end
+
+    if params[:escort].nil?
+      @escort = Escort.new(city: params[:search][:city].capitalize,
+                         gender: params[:search][:gender],
+                         age: params[:search][:age],
+                         size: params[:search][:size],
+                         )
+      @escorts = Escort.where(city: params[:search][:city].capitalize,
+                              gender: params[:search][:gender].capitalize
+                              )
+    else
+      @escort = Escort.new(city: params[:escort][:city].capitalize,
+                         gender: params[:escort][:gender],
+                         age: params[:escort][:age],
+                         size: params[:escort][:size],
+                         origin: params[:escort][:origin],
+                         available_dates: params[:escort][:available_dates],
+                         )
+      @escorts = Escort.where(city: params[:escort][:city].capitalize,
+                              gender: params[:escort][:gender].capitalize,
+                              age: params[:escort][:age],
+                              origin: params[:escort][:origin],
+                              size: params[:escort][:size],
+                              available_dates: params[:escort][:available_dates],
+                              )
+    end
+end
 
   def show
     @escort = Escort.find(params[:id])

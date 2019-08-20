@@ -1,40 +1,23 @@
-<div class="container">
+<div class="container-full">
 
-<div class="row">
-    <%= simple_form_for :search, url: escorts_path, method: :get, html: { class: "filter"} do |f| %>
-        <div class="col-12 col-md-6 col-lg-4">
+<div class="row ">
+
+  <div class="col-3">
+    <%= simple_form_for @escort, url: escorts_path, method: :get, html: { class: "filter"} do |f| %>
         <%= f.input :age, placeholder: "Age",  class: "filter-input", label:false %>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
         <%= f.input :size, placeholder: "Taille (cm)", class: "filter-input", label:false %>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-        <%= f.input :origin, placeholder: "Origine", include_blank: "Origine", collection: Escort::AUTHORIZED_ORIGIN,  class: "filter-input", label:false %>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
+        <%= f.input :origin, collection: Escort::AUTHORIZED_ORIGIN,  class: "filter-input", label:false %>
         <%= f.input :available_dates, placeholder: "Disponibilité",  class: "filter-input", label:false %>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-        <%= f.input :price_per_day, include_blank: "Prix/jour", collection: ["0..100", "101..200", "201..300", "301..400"], class: "filter-input", label:false %>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
         <%= f.input :city, placeholder: "Ville",  class: "filter-input", label:false %>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
         <%= f.input :gender, include_blank: "Genre", collection: ["Homme", "Femme"], class: "filter-input", label:false %>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4">
-        <%=  f.button :submit, class: "btn-primary" %>
-        </div>
-      <% end %>
-
-</div>
+        <%=  f.button :submit, value: "Actualiser", class: "btn-principal" %>
+    <% end %>
+  </div>
 
 
-  <h1>Vos résultats (<%= @escorts.count %>)</h1>
-<div class="row">
+
 <% @escorts.each do |escort| %>
-  <div class="col-12 col-md-6 col-lg-4">
+  <div class="col-3">
     <%= link_to escort_path(escort) do %>
     <div class="card-escort">
       <div class="face" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.6)),url('<%= cl_image_path escort.photo, :cloud_name => "dacmjlcwx" %>')">
@@ -56,6 +39,7 @@
     <% end %>
   </div>
 <% end %>
+</div>
 </div>
 </div>
 <% console %>
