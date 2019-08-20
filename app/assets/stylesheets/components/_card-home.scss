@@ -6,6 +6,14 @@
   margin: 25px 0;
 }
 
+.card-home * {
+  color:black;
+}
+
+.card-home .btn-principal {
+  color:white;
+}
+
 @media screen and (min-width: 768px) {
   .card-home {
     width: 500px;
