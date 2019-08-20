@@ -26,11 +26,13 @@ class EscortsController < ApplicationController
 
   def update
     @escort = Escort.find(params[:id])
+    redirect_to @escort
   end
 
   def delete
     @escort = Escort.find(params[:id])
     @escort.destroy
+    redirect_to @escort
   end
 
   def escort_params
