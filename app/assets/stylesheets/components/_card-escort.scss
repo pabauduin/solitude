@@ -7,6 +7,11 @@
   margin-bottom:30px;
 }
 
+.card-escort:hover {
+  bottom: 4px;
+}
+
+
 .card-escort .price {
   border-radius: 50%;
   height: 100px;
@@ -23,7 +28,6 @@
 }
 
 .card-escort .face {
-  background-image: asset-url('mickael.png');
   background-position: top;
   background-size:cover;
   height: 250px;
