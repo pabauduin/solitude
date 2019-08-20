@@ -1,2 +1,14 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner">
+  <div class="container">
+    <div class="card-home">
+      <h1>Trouvez le buddy idéal pour votre prochain événement.</h1>
+      <%= simple_form_for("") do |f| %>
+        <%= f.input :ville %>
+        <%= f.input :date, as: :date %>
+        <%= f.input :genre, include_blank: "Choisir", collection: ["Homme", "Femme"] %>
+        <%= f.button :submit, "C'est parti", class: "btn-principal" %>
+      <% end %>
+
+    </div>
+  </div>
+</div>

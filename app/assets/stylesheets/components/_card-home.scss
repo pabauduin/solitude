@@ -1,0 +1,18 @@
+.card-home {
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  padding: 40px;
+  margin: 25px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .card-home {
+    width: 500px;
+  }
+}
+
+// No margin left for dates
+.card-home .mx-1 {
+  margin-left: 0 !important;
+}
