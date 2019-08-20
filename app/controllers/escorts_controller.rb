@@ -1,6 +1,13 @@
 class EscortsController < ApplicationController
   def index
-    @escorts = Escort.all
+    @price_range = params[:search][:price_per_day].split('..').inject { |s,e| s.to_i..e.to_i }
+
+    @escorts = Escort.where(city: params[:search][:city].capitalize,
+                            gender: params[:search][:gender].capitalize,
+                            age: params[:search][:age],
+                            size: params[:search][:size],
+                            available_dates: params[:search][:available_dates],
+                            price_per_day: @price_range)
   end
 
   def show
@@ -12,11 +19,11 @@ class EscortsController < ApplicationController
   end
 
   def create
-    @escort = Escort.new(params[:escort_params])
+    @escort = Escort.new(escort_params)
     if @escort.save
       redirect_to @escort
     else
-      render new
+      render :new
     end
   end
 
@@ -36,6 +43,6 @@ class EscortsController < ApplicationController
   end
 
   def escort_params
-    params.require(:escort).permit(:name, :age, :size, :type, :city, :hair_color)
+    params.require(:escort).permit(:name, :age, :size, :origin, :city, :hair_color, :price_per_day)
   end
 end

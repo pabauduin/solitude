@@ -10,6 +10,7 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
+
   <% if current_page?(root_path) %>
     <div class="navbar navbar-expand-sm navbar-light navbar-lewagon navbar-transparent">
     <%= link_to "#", class: "navbar-brand" do %>
@@ -40,6 +41,7 @@
   </div>
 </div>
     <%= yield %>
+    <%= render 'shared/flashes' %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
   </body>
