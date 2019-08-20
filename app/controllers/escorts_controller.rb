@@ -1,10 +1,12 @@
 class EscortsController < ApplicationController
   def index
-    @escorts = Escort.all
+    @escorts = Escort.where(city: params[:search][:city].capitalize,
+                            genre: params[:search][:genre].capitalize
+                            )
   end
 
   def show
-    @escort = Escort.find(escort_params)
+    @escort = Escort.find(params[:id])
   end
 
   def new

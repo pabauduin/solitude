@@ -1,7 +1,35 @@
 <div class="container">
+
+<div class="row">
+    <%= simple_form_for :search, url: escorts_path, method: :get, html: { class: "filter"} do |f| %>
+        <div class="col-12 col-md-6 col-lg-4">
+        <%= f.input :age, placeholder: "Age",  class: "filter-input", label:false %>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+        <%= f.input :size, placeholder: "Taille (cm)", class: "filter-input", label:false %>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+        <%= f.input :origin, placeholder: "Origine", include_blank: "Origine", collection: Escort::AUTHORIZED_ORIGIN,  class: "filter-input", label:false %>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+        <%= f.input :available_dates, placeholder: "Disponibilité",  class: "filter-input", label:false %>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+        <%= f.input :price_per_day, placeholder: "Prix /jour",  class: "filter-input", label:false %>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+        <%= f.input :city, placeholder: "Ville",  class: "filter-input", label:false %>
+        </div>
+      <% end %>
+
+</div>
+
+
+  <h1>Vos résultats (<%= @escorts.count %>)</h1>
 <div class="row">
 <% @escorts.each do |escort| %>
   <div class="col-12 col-md-6 col-lg-4">
+    <%= link_to escort_path(escort) do %>
     <div class="card-escort">
       <div class="face" style="">
         <div class="infos">
@@ -19,9 +47,11 @@
       </div>
       </div>
     </div>
+    <% end %>
   </div>
 <% end %>
 </div>
 </div>
 
 <%= link_to 'Find a person', controller: "escorts", action: "new" %>
+<% console %>
