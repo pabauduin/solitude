@@ -9,5 +9,6 @@ class Escort < ApplicationRecord
   validates :origin, inclusion: { in: AUTHORIZED_ORIGIN }
   validates :price_per_day, presence: true
   validates :hair_color, presence: true
+  validates :gender, presence: true
   mount_uploader :photo, PhotoUploader
 end

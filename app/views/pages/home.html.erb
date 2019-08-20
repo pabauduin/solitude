@@ -5,7 +5,7 @@
       <%= simple_form_for :search, url: escorts_path, method: :get do |f| %>
         <%= f.input :city, value: params[:city]%>
         <%= f.input :date, as: :date, order: [:day, :month, :year], value: params[:search] %>
-        <%= f.input :genre, include_blank: "Choisir", collection: ["Homme", "Femme"], value: params[:genre] %>
+        <%= f.input :gender, include_blank: "Choisir", collection: ["Homme", "Femme"], value: params[:gender] %>
         <%= f.button :submit, "C'est parti", class: "btn-principal" %>
       <% end %>
     </div>
