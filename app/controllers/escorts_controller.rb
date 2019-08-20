@@ -4,7 +4,7 @@ class EscortsController < ApplicationController
   end
 
   def show
-    @escort = Escort.find(params[:id])
+    @escort = Escort.find(escort_params)
   end
 
   def new
@@ -36,6 +36,6 @@ class EscortsController < ApplicationController
   end
 
   def escort_params
-    params.require(:escort).permit(:name, :age, :size, :origin, :city, :hair_color)
+    params.require(:escort).permit(:name, :age, :size, :origin, :city, :hair_color, :price_per_day)
   end
 end
