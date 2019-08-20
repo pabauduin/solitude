@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :bookings
-  has_many :escorts
+  has_many :escorts, dependent: :destroy
   validates :name, presence: true
   validates :email_address, presence: true, uniqueness: true, format: { with: /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i }
   validates :city, presence: true
