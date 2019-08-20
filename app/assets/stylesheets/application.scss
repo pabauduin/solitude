@@ -11,3 +11,29 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+* {
+  color:black;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom:30px;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+p {
+  font-size: 14px;
+}
+
+a:hover {
+  text-decoration: none;
+}

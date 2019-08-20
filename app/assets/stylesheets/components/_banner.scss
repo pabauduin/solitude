@@ -1,0 +1,26 @@
+// home css config for all devices
+.banner {
+  background-image: asset-url("bg-home.jpg");
+  background-size: cover;
+  background-position:center;
+  display: flex;
+  padding-top:50px;
+  height: 100vh;
+}
+
+// home specific css config for desktop
+@media screen and (min-width: 721px) {
+  .banner .container {
+    margin-left: 50px;
+  }
+  .banner {
+    align-items: center;
+  }
+}
+
+// home specific css config for mobile
+@media screen and (max-width: 720px) {
+  .banner {
+    background-image:none;
+  }
+}

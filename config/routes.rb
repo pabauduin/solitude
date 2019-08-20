@@ -1,15 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'escorts/index'
-  get 'escorts/show'
-  get 'escorts/new'
-  get 'escorts/create'
-  get 'escorts/edit'
-  get 'escorts/update'
-  get 'escorts/delete'
-  get 'bookings/index'
-  get 'bookings/show'
-  get 'bookings/delete'
   devise_for :users
   root to: 'pages#home'
   resources 'escorts' do
