@@ -33,11 +33,11 @@
     <% if current_user.nil? %>
       <li class="nav-item">
         <% if current_page?(root_path) %>
-          <%= link_to "Inscription", new_user_registration_path, class: "color-white" %>
-          <%= link_to "Connexion", new_user_session_path, class: "color-white" %>
+          <%= link_to "Inscription", new_user_registration_path, class: "color-white nav-padding" %>
+          <%= link_to "Connexion", new_user_session_path, class: "color-white nav-padding" %>
         <% else %>
-          <%= link_to "Inscription", new_user_registration_path, class: "color-purple" %>
-          <%= link_to "Connexion", new_user_session_path, class: "color-purple" %>
+          <%= link_to "Inscription", new_user_registration_path, class: "color-purple nav-padding" %>
+          <%= link_to "Connexion", new_user_session_path, class: "color-purple nav-padding" %>
         <div class="color-white">
         <% end %>
 
