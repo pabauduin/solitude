@@ -5,10 +5,12 @@ class BookingsController < ApplicationController
 
   def show
     @booking = Booking.find(params[:id])
+    authorize @booking
   end
 
   def delete
     @booking = Booking.find(params[:id])
+    authorize @booking
     @booking.destroy
   end
 end

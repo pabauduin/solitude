@@ -21,18 +21,35 @@ class EscortsController < ApplicationController
                               size: params[:escort][:size],
                               available_dates: params[:escort][:available_dates])
     end
+
+   @escorts = Escort.geocoded #returns flats with coordinates
+
+    @markers = @escorts.map do |flat|
+      {
+        lat: flat.latitude,
+        lng: flat.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { flat: flat }),
+        image_url: helpers.asset_url('dollars.png')
+      }
+    end
+  end
+end
+
   end
 
   def show
     @escort = Escort.find(params[:id])
+    authorize @escort
   end
 
   def new
     @escort = Escort.new
+    authorize @escort
   end
 
   def create
     @escort = Escort.new(escort_params)
+    authorize @escort
     if @escort.save
       redirect_to @escort
     else
@@ -42,15 +59,18 @@ class EscortsController < ApplicationController
 
   def edit
     @escort = Escort.find(params[:id])
+    authorize @escort
   end
 
   def update
     @escort = Escort.find(params[:id])
+    authorize @escort
     redirect_to @escort
   end
 
   def delete
     @escort = Escort.find(params[:id])
+    authorize @escort
     @escort.destroy
     redirect_to @escort
   end
@@ -58,4 +78,4 @@ class EscortsController < ApplicationController
   def escort_params
     params.require(:escort).permit(:name, :age, :size, :origin, :city, :hair_color, :price_per_day)
   end
-end
+
