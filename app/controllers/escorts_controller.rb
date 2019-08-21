@@ -24,7 +24,6 @@ class EscortsController < ApplicationController
   end
 
   def show
-    puts "je suis dans escort"
     @escort = Escort.find(params[:id])
     @markers = [{
       lat: @escort.latitude,
