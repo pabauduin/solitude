@@ -21,21 +21,15 @@ class EscortsController < ApplicationController
                               size: params[:escort][:size],
                               available_dates: params[:escort][:available_dates])
     end
-
-  #   @escorts_g = Escort.geocoded #returns flats with coordinates
-
-  #   @markers = @escorts_g.map do |flat|
-  #     {
-  #       lat: flat.latitude,
-  #       lng: flat.longitude,
-  #       infoWindow: render_to_string(partial: "info_window", locals: { flat: flat }),
-  #       image_url: helpers.asset_url('dollars.png')
-  #     }
-  #   end
   end
 
   def show
+    puts "je suis dans escort"
     @escort = Escort.find(params[:id])
+    @markers = [{
+      lat: @escort.latitude,
+      lng: @escort.longitude
+    }]
     authorize @escort
   end
 

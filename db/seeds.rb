@@ -62,7 +62,7 @@ jean = Escort.new(
   user: raph,
   gender: "Homme"
 )
-jean.remote_photo_url = "https://file1.telestar.fr/var/telestar/storage/images/2/9/3/293790/1747793-1/Sylvain-Durif-a-la-57eme-place-du-classement-des-Mecs-a-adopter-2017_exact1024x768_l.jpg"
+jean.remote_photo_url = "https://res.cloudinary.com/dacmjlcwx/image/upload/v1566381728/szcfrfwhopt27owinw9z.jpg"
 jean.save!
 
 
@@ -78,7 +78,7 @@ simon = Escort.new(
     user: alex,
     gender: "Homme"
     )
-simon.remote_photo_url = "http://aws-cf.caradisiac.com/prod/photos/3/8/5/653385/1777472/img-1777472c8d.jpg?v=6"
+simon.remote_photo_url = "https://res.cloudinary.com/dacmjlcwx/image/upload/v1566377108/c7quzagyyb9lbcnadnug.jpg"
 simon.save!
 
 remy = Escort.new(
@@ -93,7 +93,7 @@ remy = Escort.new(
   user: raph,
   gender: "Homme"
 )
-remy.remote_photo_url = "http://www.coiffexpert.com/assets/Uploads/homme-content.jpg"
+remy.remote_photo_url = "https://res.cloudinary.com/dacmjlcwx/image/upload/v1566315407/xl96xlf5of7yp1vxl7fn.jpg"
 remy.save!
 
 marine = Escort.new(
@@ -108,7 +108,7 @@ marine = Escort.new(
   user: alex,
   gender: "Femme"
 )
-marine.remote_photo_url = "https://img.buzzfeed.com/buzzfeed-static/static/2017-02/6/9/asset/buzzfeed-prod-fastlane-02/sub-buzz-30775-1486389833-1.jpg?downsize=700:*&output-format=auto&output-quality=auto"
+marine.remote_photo_url = "https://res.cloudinary.com/dacmjlcwx/image/upload/v1566377110/gjhue6wmxiort2bvoj25.jpg"
 marine.save!
 
 
@@ -124,7 +124,7 @@ dominique = Escort.new(
   user: alex,
   gender: "Femme"
 )
-dominique.remote_photo_url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1qOHbiKkERfXcS3t3oNPOD2UUvgVkhUVgdhBpPhYPjIvw6l0fPQ"
+dominique.remote_photo_url = "https://res.cloudinary.com/dacmjlcwx/image/upload/v1566377110/g9tzt9kbfzr8uwsm0dvv.jpg"
 dominique.save!
 
 

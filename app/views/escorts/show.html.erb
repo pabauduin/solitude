@@ -1,29 +1,32 @@
-<h1>Information</h1>
-
 <div class="container">
-
-<div class="card-home">
-      <h1>Decouvrez Rémy</h1>
-      <div class="face" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.6)),url('http://res.cloudinary.com/dacmjlcwx/image/upload/v1566315407/xl96xlf5of7yp1vxl7fn.jpg')">
-        <div class="infos">
-          <div id="name">Remy</div>
-          <div id="age">21 ans</div>
-          <div id="city">Paris</div>
-        </div>
-
-</div>
-    <%= link_to "Reservez", "#", class: "btn btn-flat"%>
-
-
-
-
+      <div>
+      <%= cl_image_tag @escort.photo, alt: "alttext", style: "width: 400px; border-radius:10px; margin-bottom:10px" %>
+      </div>
+      <h1 style="display:inline; padding-right:10px;"><%= @escort.name.capitalize %></h1> <%= link_to "Reserver", "#", class: "btn-principal"%>
+      <ul style="margin: 20px 0">
+        <li><%= @escort.age %> ans</li>
+        <li><%= @escort.city %></li>
+        <li><%= @escort.size %>cm</li>
+        <li><%= @escort.origin %></li>
+        <li>Cheveux: <%= @escort.hair_color %></li>
+        <li><%= @escort.price_per_day %> €/jour</li>
+      </ul>
 </div>
 
 
-<div
-  id="map"
-  style="width: 100%;
-  height: 600px;"
-  data-markers="<%= @markers.to_json %>"
-  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-></div>
+t.string "name"
+    t.string "age"
+    t.string "size"
+    t.string "origin"
+    t.string "available_dates"
+    t.integer "price_per_day"
+    t.string "city"
+    t.string "hair_color"
+
+ <div
+    id="map"
+    class="no-sticky"
+    style="width: 500px; height: 600px;"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
