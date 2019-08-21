@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 2019_08_20_153625) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "photo"
+    t.string "gender"
     t.index ["user_id"], name: "index_escorts_on_user_id"
   end
 
