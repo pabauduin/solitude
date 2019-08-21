@@ -4,7 +4,7 @@
       <h1>Trouvez le buddy idéal pour votre prochain événement.</h1>
       <%= simple_form_for :search, url: escorts_path, method: :get do |f| %>
         <%= f.input :city, label: "Ville", value: params[:city]%>
-        <%= f.input :date, as: :date, label: "Date", order: [:day, :month, :year], value: params[:search] %>
+        <%= f.input :date, as: :date, label: "Date", order: [:day, :month, :year], value: params[:search], start_year: Date.today.year %>
         <%= f.input :gender, include_blank: "Choisir", label: "Genre", collection: ["Homme", "Femme"], value: params[:gender] %>
         <%= f.button :submit, "C'est parti", class: "btn-principal" %>
       <% end %>
