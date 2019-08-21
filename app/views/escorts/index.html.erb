@@ -2,7 +2,7 @@
 
 <div class="row ">
 
-  <div class="col-3">
+  <div class="col-12 col-md-4 col-lg-3">
     <%= simple_form_for @escort, url: escorts_path, method: :get, html: { class: "filter"} do |f| %>
         <%= f.input :age, placeholder: "Age",  class: "filter-input", label:false %>
         <%= f.input :size, placeholder: "Taille (cm)", class: "filter-input", label:false %>
@@ -14,8 +14,12 @@
     <% end %>
   </div>
 
+<% if @escorts.first.nil? %>
+Aucun buddy n'est disponible pour cette configuration. snif.
+<% end %>
+
 <% @escorts.each do |escort| %>
-  <div class="col-3">
+  <div class="col-12 col-md-4 col-lg-3">
     <%= link_to escort_path(escort) do %>
     <div class="card-escort">
       <div class="face" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.6)),url('<%= cl_image_path escort.photo, :cloud_name => "dacmjlcwx" %>')">
@@ -40,4 +44,3 @@
 </div>
 </div>
 </div>
-
