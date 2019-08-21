@@ -25,10 +25,12 @@ class EscortsController < ApplicationController
 
   def show
     @escort = Escort.find(params[:id])
-    @markers = [{
-      lat: @escort.latitude,
-      lng: @escort.longitude
-    }]
+    # @escort = Escort.geocoded
+    @markers = []
+    @markers << {
+        lat: @escort.latitude,
+        lng: @escort.longitude
+      }
     authorize @escort
   end
 
