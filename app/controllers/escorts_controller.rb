@@ -39,14 +39,17 @@ end
 
   def show
     @escort = Escort.find(params[:id])
+    authorize @escort
   end
 
   def new
     @escort = Escort.new
+    authorize @escort
   end
 
   def create
     @escort = Escort.new(escort_params)
+    authorize @escort
     if @escort.save
       redirect_to @escort
     else
@@ -56,15 +59,18 @@ end
 
   def edit
     @escort = Escort.find(params[:id])
+    authorize @escort
   end
 
   def update
     @escort = Escort.find(params[:id])
+    authorize @escort
     redirect_to @escort
   end
 
   def delete
     @escort = Escort.find(params[:id])
+    authorize @escort
     @escort.destroy
     redirect_to @escort
   end
