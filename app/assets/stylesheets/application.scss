@@ -37,3 +37,19 @@ p {
 a:hover {
   text-decoration: none;
 }
+
+.color-white {
+  color:white;
+}
+
+.color-white:hover {
+  color:white;
+}
+
+.color-purple {
+  color: $purple;
+}
+
+.color-purple:hover {
+  color: $purple;
+}
