@@ -6,7 +6,7 @@
     <%= simple_form_for @escort, url: escorts_path, method: :get, html: { class: "filter"} do |f| %>
         <%= f.input :age, placeholder: "Age",  class: "filter-input", label:false %>
         <%= f.input :size, placeholder: "Taille (cm)", class: "filter-input", label:false %>
-        <%= f.input :origin, collection: Escort::AUTHORIZED_ORIGIN,  class: "filter-input", label:false %>
+        <%= f.input :origin, collection: Escort::AUTHORIZED_ORIGIN,  include_blank: "Origine", class: "filter-input", label:false %>
         <%= f.input :available_dates, placeholder: "Disponibilité",  class: "filter-input", label:false %>
         <%= f.input :city, placeholder: "Ville",  class: "filter-input", label:false %>
         <%= f.input :gender, include_blank: "Genre", collection: ["Homme", "Femme"], class: "filter-input", label:false %>
