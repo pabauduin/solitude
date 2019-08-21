@@ -73,7 +73,7 @@ simon = Escort.new(
     origin: "Asiatique",
     available_dates: Faker::Date.forward(days: 23),
     price_per_day: "100€",
-    city: "Lille",
+    city: "301 rue leon gambetta, 59000 LILLE",
     hair_color: "brun",
     user: alex,
     gender: "Homme"
@@ -88,7 +88,7 @@ remy = Escort.new(
   origin: "Caucasien",
   available_dates: Faker::Date.forward(days: 23),
   price_per_day: "400€",
-  city: "Paris",
+  city: "57 avenue de la liberté, 75000 Paris",
   hair_color: "blond",
   user: raph,
   gender: "Homme"
@@ -103,7 +103,7 @@ marine = Escort.new(
   origin: "Caucasien",
   available_dates: Faker::Date.forward(days: 23),
   price_per_day: "400€",
-  city: "Lille",
+  city: "3 rue kant, 59000 Lille",
   hair_color: "black",
   user: alex,
   gender: "Femme"
@@ -119,7 +119,7 @@ dominique = Escort.new(
   origin: "Caucasien",
   available_dates: Faker::Date.forward(days: 23),
   price_per_day: "200€",
-  city: "Bordeaux",
+  city: "36 cours du chapeau rouge, 33000 Bordeaux",
   hair_color: "black",
   user: alex,
   gender: "Femme"
