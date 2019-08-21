@@ -29,7 +29,8 @@ class EscortsController < ApplicationController
     @markers = []
     @markers << {
         lat: @escort.latitude,
-        lng: @escort.longitude
+        lng: @escort.longitude,
+        image_url: helpers.asset_url('user.png')
       }
     authorize @escort
   end
