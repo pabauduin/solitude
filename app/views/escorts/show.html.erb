@@ -14,13 +14,6 @@
 </div>
 
 
-<div
-  id="map"
-  style="width: 100%;
-  height: 600px;"
-  data-markers="<%= @markers.to_json %>"
-  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-></div>
 t.string "name"
     t.string "age"
     t.string "size"
@@ -29,3 +22,11 @@ t.string "name"
     t.integer "price_per_day"
     t.string "city"
     t.string "hair_color"
+
+ <div
+    id="map"
+    class="no-sticky"
+    style="width: 500px; height: 600px;"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
