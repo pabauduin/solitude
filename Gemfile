@@ -17,7 +17,7 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'devise'
-gem 'pundit'
+# gem 'pundit'
 
 
 group :development do
