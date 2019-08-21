@@ -1,8 +1,8 @@
 class ApplicationController < ActionController::Base
-    # [...]
+  # [...]
   before_action :configure_permitted_parameters, if: :devise_controller?
   # before_action :authenticate_user!
-  include Pundit
+  # include Pundit
 
   def configure_permitted_parameters
     # For additional fields in app/views/devise/registrations/new.html.erb
@@ -13,13 +13,17 @@ class ApplicationController < ActionController::Base
   end
 
 
-  after_action :verify_authorized, except: :index, unless: :skip_pundit?
-  after_action :verify_policy_scoped, only: :index, unless: :skip_pundit?
-   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
-    def user_not_authorized
-      flash[:alert] = "You are not authorized to perform this action."
-      redirect_to(root_path)
-    end
+  after_action :verify_authorized, except: [:index, :show], unless: :skip_pundit?
+  after_action :verify_policy_scoped, except: [:index, :show], unless: :skip_pundit?
+
+  rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
+
+  def user_not_authorized
+    flash[:alert] = "You are not authorized to perform this action."
+    redirect_to(root_path)
+  end
+
+
 
   private
 
