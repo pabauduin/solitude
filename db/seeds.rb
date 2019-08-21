@@ -17,7 +17,7 @@ raph =
       name: 'Raphael',
       email_address: 'raphael@gmail.com',
       city: 'Lille',
-      user_type: 'pimp',
+      user_type: '1',
       email: 'raphael@gmail.com',
       password: 'azerty'
       )
@@ -27,7 +27,7 @@ sara =
         name: 'Sara',
         email_address: 'sara@gmail.com',
         city: 'Paris',
-        user_type: 'user',
+        user_type: '0',
         email: 'sara@gmail.com',
         password: 'azerty'
         )
@@ -37,7 +37,7 @@ alex =
         name: 'Alex',
         email_address: 'alex@gmail.com',
         city: 'Lyon',
-        user_type: 'pimp',
+        user_type: '1',
         email: 'alex@gmail.com',
         password: 'azerty'
         )
@@ -47,7 +47,7 @@ pa =
         name: 'PA',
         email_address: 'pa@gmail.com',
         city: 'Lille',
-        user_type: 'user',
+        user_type: '<0></0>',
         email: 'pa@gmail.com',
         password: 'azerty'
         )
