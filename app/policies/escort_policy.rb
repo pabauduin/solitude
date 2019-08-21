@@ -15,7 +15,6 @@ class EscortPolicy < ApplicationPolicy
 
   def update?
     pimp_is_owner_or_admin?
-
   end
 
   def delete?
@@ -27,5 +26,4 @@ class EscortPolicy < ApplicationPolicy
   def pimp_is_owner_or_admin?
     record.user == user || user.admin
   end
-
 end
