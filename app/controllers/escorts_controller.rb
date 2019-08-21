@@ -47,6 +47,7 @@ class EscortsController < ApplicationController
   def create
     @escort = Escort.new(escort_params)
     authorize @escort
+    @escort.user = current_user
     if @escort.save
       redirect_to @escort
     else
@@ -73,6 +74,6 @@ class EscortsController < ApplicationController
   end
 
   def escort_params
-    params.require(:escort).permit(:name, :age, :size, :origin, :city, :hair_color, :price_per_day)
+    params.require(:escort).permit(:name, :gender, :age, :size, :origin, :city, :hair_color, :price_per_day, :photo)
   end
 end

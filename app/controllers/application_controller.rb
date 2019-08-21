@@ -12,8 +12,8 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:account_update, keys: [:name, :user_type, :city])
   end
 
-  after_action :verify_authorized, except: [:index, :show], unless: :skip_pundit?
-  after_action :verify_policy_scoped, except: [:index, :show], unless: :skip_pundit?
+  # after_action :verify_authorized, except: [:index, :show], unless: :skip_pundit?
+  # after_action :verify_policy_scoped, except: [:index, :show], unless: :skip_pundit?
 
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 

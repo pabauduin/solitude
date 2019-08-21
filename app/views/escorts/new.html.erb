@@ -1,6 +1,22 @@
-<h1>New Escort</h1>
+<h1>Let's create a new escort ! </h1>
 
-<%= render 'form', escort: @escort %>
+<%= simple_form_for @escort, html: {class: "form-solitude"} do |f| %>
+  <%= f.error_notification %>
 
+  <%= f.input :name, placeholder: 'Your name' %>
+  <%= f.input :city, placeholder: 'Your city' %>
+  <%= f.input :age, placeholder: 'Your age' %>
+  <%= f.input :size, placeholder: 'Your size (cm)' %>
+  <%= f.input :origin, collection: ["Africain", "Caucasien", "Asiatique", "Indien"] %>
+  <%= f.input :price_per_day, placeholder: 'Your price for 1 day' %>
+  <%= f.input :hair_color, as: :radio_buttons, collection: ["Blond", "Brunette", "Red", "Black"],wrapper: :vertical_collection_inline %>
+  <%= f.input :gender, as: :radio_buttons, collection: ["Men", "Women"] %>
+  <%= f.input :photo %>
+  <%= f.input :photo_cache, as: :hidden %>
+
+
+  <%= f.button :submit, class: "btn-primary" %>
+
+<% end %>
 
 
