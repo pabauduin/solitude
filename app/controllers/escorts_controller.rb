@@ -1,31 +1,25 @@
 class EscortsController < ApplicationController
   def index
-
-
     if params[:escort].nil?
       @escort = Escort.new(city: params[:search][:city].capitalize,
-                         gender: params[:search][:gender],
-                         age: params[:search][:age],
-                         size: params[:search][:size],
-                         )
+                           gender: params[:search][:gender],
+                           age: params[:search][:age],
+                           size: params[:search][:size])
       @escorts = Escort.where(city: params[:search][:city].capitalize,
-                              gender: params[:search][:gender].capitalize
-                              )
+                              gender: params[:search][:gender].capitalize)
     else
       @escort = Escort.new(city: params[:escort][:city].capitalize,
-                         gender: params[:escort][:gender],
-                         age: params[:escort][:age],
-                         size: params[:escort][:size],
-                         origin: params[:escort][:origin],
-                         available_dates: params[:escort][:available_dates],
-                         )
+                           gender: params[:escort][:gender],
+                           age: params[:escort][:age],
+                           size: params[:escort][:size],
+                           origin: params[:escort][:origin],
+                           available_dates: params[:escort][:available_dates])
       @escorts = Escort.where(city: params[:escort][:city].capitalize,
                               gender: params[:escort][:gender].capitalize,
                               age: params[:escort][:age],
                               origin: params[:escort][:origin],
                               size: params[:escort][:size],
-                              available_dates: params[:escort][:available_dates],
-                              )
+                              available_dates: params[:escort][:available_dates])
     end
 
    @escorts = Escort.geocoded #returns flats with coordinates
@@ -40,6 +34,8 @@ class EscortsController < ApplicationController
     end
   end
 end
+
+  end
 
   def show
     @escort = Escort.find(params[:id])
