@@ -1,4 +1,5 @@
 <div class="container-full">
+  <h1 style="margin-left: 20px;">🐻 Vos résultats (<%= @escorts.count %>)</h1>
   <div class="wrapper">
     <div class="box1">
     <%= simple_form_for @escort, url: escorts_path, method: :get, html: { class: "filter"} do |f| %>
@@ -12,11 +13,14 @@
     <% end %>
     </div>
 
+<div>
 
-
+</div>
 <% if @escorts.first.nil? %>
-Aucun buddy n'est disponible pour cette configuration. snif.
+🐻 Aucun buddy n'est disponible pour cette configuration. snif. 🐻
 <% end %>
+
+
 <div class="box2">
 <% @escorts.each do |escort| %>
     <%= link_to escort_path(escort) do %>
