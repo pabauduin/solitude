@@ -70,6 +70,6 @@ class EscortsController < ApplicationController
   end
 
   def escort_params
-    params.require(:escort).permit(:name, :gender, :age, :size, :origin, :city, :hair_color, :available_dates, :price_per_day, :photo)
+    params.require(:escort).permit(:name, :gender, :age, :size, :origin, :city, :hair_color, :start_at, :price_per_day, :photo)
   end
 end
