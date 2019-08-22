@@ -2,10 +2,16 @@
   width: 55px;
   height: 55px;
   border-radius: 50%;
+  border: 2px solid white;
 }
 .avatar-large {
-  width: 56px;
+  width: 61px;
   border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  padding-top: 6px;
+  margin-right: auto;
+
 }
 .avatar-bordered {
   width: 40px;
