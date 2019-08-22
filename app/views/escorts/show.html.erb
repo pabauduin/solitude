@@ -4,7 +4,8 @@
       <div>
       <%= cl_image_tag @escort.photo, alt: "alttext", style: "object-fit: cover; height: 200px; width: 400px; border-radius:10px; margin-bottom:10px" %>
       </div>
-      <h1 style="display:inline; padding-right:10px;"><%= @escort.name.capitalize %></h1> <%= link_to "Reserver", "#", class: "btn-principal"%>
+      <h1 style="display:inline; padding-right:10px;"><%= @escort.name.capitalize %></h1>
+      <%= link_to "Réserver", escort_bookings_path(@escort), :method => :post, class: "btn-principal"%>
       <ul style="margin: 20px 0">
         <li><%= @escort.age %> ans</li>
         <li><%= @escort.city %></li>
@@ -24,3 +25,4 @@
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 </div>
+<% console %>

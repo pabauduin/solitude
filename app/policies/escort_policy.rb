@@ -17,8 +17,8 @@ class EscortPolicy < ApplicationPolicy
     pimp_is_owner_or_admin?
   end
 
-  def delete?
-    pimp_is_owner_or_admin?
+  def destroy?
+    user.user_type == '1'
   end
 
   private

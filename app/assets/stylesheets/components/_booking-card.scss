@@ -1,0 +1,60 @@
+.booking-card {
+  color: black;
+  background: $white;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  position:relative;
+  margin: 65px 0;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.booking-card .left {
+  padding: 60px 0 20px 20px;
+}
+
+.booking-card .right {
+  padding: 0 20px 0 0;
+  text-align:right;
+}
+
+.booking-card .booking-date {
+  position: absolute;
+  right: 9px;
+  top: -20px;
+  color: white;
+  font-size: 14px;
+}
+
+.booking-card .avatar {
+  position: absolute;
+   left: 20px;
+  top: -50px;
+}
+
+.booking-card .avatar img {
+  width:100px;
+  height:100px;
+  object-fit: cover;
+  background-color:white;
+  border-radius: 50px;
+  padding:5px;
+}
+
+.booking-card .name {
+
+}
+
+.booking-card .price {
+  font-weight: 600;
+}
+
+.booking-card .day-use {
+  margin-bottom:20px;
+  font-weight: 600;
+}
+
+.booking-card .delete a {
+  color:$red;
+}

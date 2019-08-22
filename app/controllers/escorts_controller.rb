@@ -62,11 +62,11 @@ class EscortsController < ApplicationController
     redirect_to @escort
   end
 
-  def delete
+  def destroy
     @escort = Escort.find(params[:id])
     authorize @escort
     @escort.destroy
-    redirect_to @escort
+    redirect_to profile_path(current_user.id)
   end
 
   def escort_params

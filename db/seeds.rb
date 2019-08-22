@@ -11,6 +11,9 @@ User.destroy_all
 puts 'Destroy all escorts'
 Escort.destroy_all
 
+puts 'Destroy all bookings'
+Booking.destroy_all
+
 puts 'Create  4 User'
 raph =
     User.create!(
@@ -43,7 +46,7 @@ pa =
       User.create!(
         name: 'PA',
         city: 'Lille',
-        user_type: '<0></0>',
+        user_type: '0',
         email: 'pa@gmail.com',
         password: 'azerty'
         )
@@ -55,7 +58,7 @@ jean = Escort.new(
   age: "31",
   size: "170",
   origin: "Caucasien",
-  available_dates: Faker::Date.forward(days: 23),
+  available_dates: "2019-09-23",
   price_per_day: "300€",
   city: "Lille",
   hair_color: "noir",
@@ -71,7 +74,7 @@ simon = Escort.new(
     age: "24",
     size: "179",
     origin: "Asiatique",
-    available_dates: Faker::Date.forward(days: 23),
+    available_dates: "2019-09-24",
     price_per_day: "100€",
     city: "Lille",
     hair_color: "brun",
@@ -86,7 +89,7 @@ remy = Escort.new(
   age: "21",
   size: "190",
   origin: "Caucasien",
-  available_dates: Faker::Date.forward(days: 23),
+  available_dates: "2019-09-25",
   price_per_day: "400€",
   city: "Paris",
   hair_color: "blond",
@@ -101,7 +104,7 @@ marine = Escort.new(
   age: "21",
   size: "175",
   origin: "Caucasien",
-  available_dates: Faker::Date.forward(days: 23),
+  available_dates: "2019-09-26",
   price_per_day: "400€",
   city: "Lyon",
   hair_color: "noir",
@@ -117,7 +120,7 @@ dominique = Escort.new(
   age: "38",
   size: "175",
   origin: "Caucasien",
-  available_dates: Faker::Date.forward(days: 23),
+  available_dates: "2019-09-27",
   price_per_day: "200€",
   city: "Bordeaux",
   hair_color: "noir",
