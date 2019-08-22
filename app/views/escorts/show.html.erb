@@ -20,7 +20,11 @@
                <p>  <%= @escort.price_per_day %> €/jour</p>
                <p>  <%= @escort.size %> cm</p>
               </div>
-            <div class= "reserver"> <%= link_to "RESERVER", escort_bookings_path(@escort), :method => :post, class: "btn-principal"%></div>
+
+              <% if current_user.user_type == "0" %>
+                <div class= "reserver"> <%= link_to "RESERVER", escort_bookings_path(@escort), :method => :post, class: "btn-principal"%></div>
+              <% end %>
+
           </div>
         </div>
 
