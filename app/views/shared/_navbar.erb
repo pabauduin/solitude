@@ -1,0 +1,64 @@
+  <% if current_page?(root_path) %>
+    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon navbar-transparent">
+    <%= link_to "#", class: "navbar-brand" do %>
+    <%= image_tag "logo-white.svg" %>
+  <% end %>
+  <% else %>
+    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+    <%= link_to "/", class: "navbar-brand" do %>
+    <%= image_tag "logo-purple.svg" %>
+    <% end %>
+  <% end %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+    <!--       si l'utilisateur n'est pas connecté-->
+    <% if current_user.nil? %>
+      <li class="nav-item">
+        <% if current_page?(root_path) %>
+          <%= link_to "Inscription", new_user_registration_path, class: "color-white nav-margin" %>
+          <%= link_to "Connexion", new_user_session_path, class: "color-white nav-margin" %>
+        <% else %>
+          <%= link_to "Inscription", new_user_registration_path, class: "color-purple nav-margin" %>
+          <%= link_to "Connexion", new_user_session_path, class: "color-purple nav-margin" %>
+        <div class="color-white">
+      </li>
+    <% end %>
+    <!--       si l'utilisateur est un pimp-->
+    <% elsif current_user.user_type == "1" %>
+    <% if current_page?(root_path) %>
+        <li class="nav-item"><%= link_to "Gérer", profile_path(current_user.id), class: "color-white nav-link nav-margin" %></li>
+        <% else %>
+          <li class="nav-item"><%= link_to "Gérer", profile_path(current_user.id), class: "color-purple nav-link nav-margin" %></li>
+        <% end %>
+      <li class="nav-item dropdown">
+        <%= image_tag "https://res.cloudinary.com/dacmjlcwx/image/upload/v1566378828/image_invsq3.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <%= link_to "Profil",  edit_user_registration_path, class: "dropdown-item" %>
+          <%= link_to "Ajouter Buddy",  new_escort_path, class: "dropdown-item" %>
+          <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, class: "dropdown-item", style: "color: #FF6464;" %>
+        </div>
+      </li>
+
+    <!--       si l'utilisateur est un regular user-->
+    <% else %>
+      <% if current_page?(root_path) %>
+        <li class="nav-item"><%= link_to "Gérer", profile_path(current_user.id), class: "color-white nav-link nav-margin" %></li>
+        <% else %>
+          <li class="nav-item"><%= link_to "Gérer", profile_path(current_user.id), class: "color-purple nav-link nav-margin" %></li>
+        <% end %>
+
+        <%= image_tag "https://res.cloudinary.com/dacmjlcwx/image/upload/v1566378829/image_1_nungsc.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <%= link_to "Profil",  edit_user_registration_path, class: "dropdown-item" %>
+          <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, class: "dropdown-item", style: "color: #FF6464;" %>
+        </div>
+      </li>
+    <% end %>
+    </ul>
+  </div>
+  </div>
