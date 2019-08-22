@@ -1,11 +1,11 @@
 .card-escort {
   background: white;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
   position:relative;
   height: 320px;
   margin-bottom:10px;
   margin-top:10px;
+  background-color: white;
 }
 
 .card-escort:hover {
@@ -17,7 +17,9 @@
   height: 100px;
   width: 100px;
   position: absolute;
-  background-color: $darkpurple;
+  background: rgb(214,140,1);
+  background: linear-gradient(90deg, #f3c423 0%, #ff9449 100%);
+  border: 3px solid white;
   right: 20px;
   top: 175px;
   display: flex;
@@ -31,9 +33,9 @@
   background-position: top;
   background-size:cover;
   height: 250px;
-  border-radius: 10px 10px 0 0;
   position:relative;
 }
+
 
 .card-escort .face .infos {
   position:absolute;
@@ -61,9 +63,10 @@
 .card-escort .content .config {
   padding: 3px 8px;
   border-radius: 5px;
-  background-color: $gray;
-  color: $darkgray;
-  margin: 0 5px;
+  background-color: $bnblue;
+  color: $white;
+  margin: 0 7px;
+
   font-size: 12px;
 }
 
