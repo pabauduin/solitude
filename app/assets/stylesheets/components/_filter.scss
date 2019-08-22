@@ -1,5 +1,4 @@
 
-
 .filter .form-control {
   background-color: rgba(255,255,255, 0.7);
   height: 40px;
@@ -8,6 +7,41 @@
   border: none;
 }
 
+.wrapper {
+  display: flex;
+  justify-content: start;
+}
+
+
+@media screen and (max-width: 721px) {
+  .box1 {
+  width: 100% !important;
+  margin-left: 0px !important;
+  }
+  .wrapper {
+    flex-wrap: wrap;
+  }
+  .box2 a {
+    width:100% !important;
+  }
+}
+
+.box1 {
+  width: 240px;
+  margin-left: 20px;
+}
+
+.box2 {
+  margin: 0 20px;
+
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.box2 a {
+  margin: 0 10px;
+}
 
 .filter .form-control::-webkit-input-placeholder {
   color: rgba(0,0,0, 0.6);
