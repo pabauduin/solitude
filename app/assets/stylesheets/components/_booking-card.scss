@@ -23,27 +23,23 @@
   position: absolute;
   right: 9px;
   top: -20px;
-  color: white;
+  color: $bnblue;
   font-size: 14px;
 }
 
-.booking-card .avatar {
+.booking-card .avatar-big {
   position: absolute;
    left: 20px;
   top: -50px;
 }
 
-.booking-card .avatar img {
+.booking-card .avatar-big img {
   width:100px;
   height:100px;
   object-fit: cover;
   background-color:white;
   border-radius: 50px;
   padding:5px;
-}
-
-.booking-card .name {
-
 }
 
 .booking-card .price {
