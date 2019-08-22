@@ -1,0 +1,46 @@
+<div class="container">
+
+    <h1>Mes buddies</h1>
+
+<div class="row">
+
+<% @escorts.each do |escort| %>
+
+  <% if current_user.user_type == "0" %>
+    <div class="col-12 col-md-6">
+      <div class="booking-card">
+        <div class="avatar"><%= cl_image_tag escort[0][0].photo, alt: "photo escort" %></div>
+        <div class="booking-date">Réservé le <%= escort[1].booking_date %></div>
+        <div class="left">
+          <div class="name"><%= escort[0][0].name %>, <%= escort[0][0].age %> ans</div>
+          <div class="price"><%= escort[0][0].price_per_day %>€ / jour</div>
+        </div>
+        <div class="right">
+          <div class="city"><%= escort[0][0].city %></div>
+          <div class="day-use"><%= escort[1].day_use_date %></div>
+          <div class="delete"><%= link_to "Annuler", escort_booking_path(escort[1].id), :method => :delete %></div>
+        </div>
+      </div>
+    </div>
+
+  <% else %>
+    <div class="col-12 col-md-6">
+      <div class="booking-card">
+        <div class="avatar"><%= cl_image_tag escort.photo, alt: "photo escort" %></div>
+        <div class="left">
+          <div class="name"><%= escort.name %>, <%= escort.age %> ans</div>
+          <div class="price"><%= escort.price_per_day %>€ / jour</div>
+        </div>
+        <div class="right">
+          <div class="city"><%= escort.city.capitalize %></div>
+          <div class="delete"><%= link_to "Virer", escort_path(escort.id), :method => :delete %></div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+<% end %>
+
+<% console %>
+
+</div>

@@ -45,11 +45,11 @@ a:hover {
 }
 
 .color-white {
-  color:white;
+  color:white !important;
 }
 
 .color-white:hover {
-  color:white;
+  color:white !important;
 }
 
 .color-purple {
@@ -58,4 +58,5 @@ a:hover {
 
 .color-purple:hover {
   color: $bnblue;
+
 }
