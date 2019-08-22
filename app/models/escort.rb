@@ -1,6 +1,7 @@
 class Escort < ApplicationRecord
   AUTHORIZED_ORIGIN = ["Africain", "Caucasien", "Asiatique", "Indien"]
   belongs_to :user
+  has_many :bookings, dependent: :destroy
   validates :name, presence: true
   validates :city, presence: true
   validates :age, presence: true, inclusion: { in: ("18".."99") }

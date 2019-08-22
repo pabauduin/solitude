@@ -6,11 +6,15 @@ class BookingPolicy < ApplicationPolicy
   end
 
   def show?
+    user.user_type == '0' || user.user_type == '1'
+  end
+
+  def create?
     user.user_type == '0'
   end
 
-  def delete?
-    user_is_owner_or_admin?
+  def destroy?
+    user.user_type == '0' || user.user_type == '1'
   end
 
   private
@@ -18,5 +22,4 @@ class BookingPolicy < ApplicationPolicy
   def user_is_owner_or_admin?
     record.user == user || user.admin
   end
-
 end
