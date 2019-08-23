@@ -76,7 +76,7 @@ marine = Escort.new(
   origin: "Caucasien",
   available_dates: "2019-08-24",
   price_per_day: "400€",
-  city: "Lyon",
+  city: "Paris",
   hair_color: "brun",
   user: alex,
   gender: "Femme"
@@ -122,7 +122,7 @@ jules = Escort.new(
   origin: "Caucasien",
   available_dates: "2019-08-25",
   price_per_day: "280€",
-  city: "Lyon",
+  city: "Lille",
   hair_color: "blond",
   user: raphael,
   gender: "Homme"
@@ -152,7 +152,7 @@ marc = Escort.new(
   origin: "Caucasien",
   available_dates: "2019-08-24",
   price_per_day: "250€",
-  city: "Lyon",
+  city: "Lille",
   hair_color: "blond",
   user: alex,
   gender: "Homme"
@@ -167,7 +167,7 @@ simon = Escort.new(
   origin: "Africain",
   available_dates: "2019-08-24",
   price_per_day: "290",
-  city: "Bordeaux",
+  city: "Lille",
   hair_color: "brun",
   user: alex,
   gender: "Homme"
@@ -182,7 +182,7 @@ marius = Escort.new(
   origin: "Africain",
   available_dates: "2019-08-25",
   price_per_day: "290",
-  city: "Bordeaux",
+  city: "Lille",
   hair_color: "brun",
   user: raphael,
   gender: "Homme"
@@ -197,7 +197,7 @@ adele = Escort.new(
   origin: "Caucasien",
   available_dates: "2019-08-24",
   price_per_day: "220€",
-  city: "Bordeaux",
+  city: "Lille",
   hair_color: "brun",
   user: raphael,
   gender: "Femme"
@@ -259,7 +259,7 @@ roxane = Escort.new(
   origin: "Africain",
   available_dates: "2019-08-25",
   price_per_day: "280€",
-  city: "Bordeaux",
+  city: "Lille",
   hair_color: "brun",
   user: raphael,
   gender: "Femme"
@@ -276,7 +276,7 @@ blanche = Escort.new(
   origin: "Caucasien",
   available_dates: "2019-08-24",
   price_per_day: "220€",
-  city: "Nice",
+  city: "Lille",
   hair_color: "brun",
   user: alex,
   gender: "Femme"
@@ -291,7 +291,7 @@ octave = Escort.new(
   origin: "Caucasien",
   available_dates: "2019-08-24",
   price_per_day: "180€",
-  city: "Nice",
+  city: "Lille",
   hair_color: "blond",
   user: raphael,
   gender: "Homme"
@@ -306,7 +306,7 @@ elise = Escort.new(
   origin: "Caucasien",
   available_dates: "2019-08-25",
   price_per_day: "230€",
-  city: "Paris",
+  city: "Lille",
   hair_color: "blond",
   user: raphael,
   gender: "Femme"
@@ -321,7 +321,7 @@ rose = Escort.new(
   origin: "Caucasien",
   available_dates: "2019-08-25",
   price_per_day: "120€",
-  city: "Bordeaux",
+  city: "Lille",
   hair_color: "rousse",
   user: alex,
   gender: "Femme"
@@ -336,7 +336,7 @@ valentin = Escort.new(
   origin: "Asiatique",
   available_dates: "2019-08-24",
   price_per_day: "199€",
-  city: "Nice",
+  city: "Lille",
   hair_color: "brun",
   user: raphael,
   gender: "Homme"
@@ -351,7 +351,7 @@ emma = Escort.new(
   origin: "Asiatique",
   available_dates: "2019-08-24",
   price_per_day: "190€",
-  city: "Bordeaux",
+  city: "Lille",
   hair_color: "chatain",
   user: alex,
   gender: "Femme"
