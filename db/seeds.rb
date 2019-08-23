@@ -61,7 +61,7 @@ jean = Escort.new(
   origin: "Caucasien",
   available_dates: ["2019-09-23", "2019-08-25"],
   price_per_day: "300€",
-  city: "303 rue leon gambetta, Lille",
+  city: "Lille",
   hair_color: "blond",
   user: raphael,
   gender: "Homme"
@@ -76,7 +76,7 @@ marine = Escort.new(
   origin: "Caucasien",
   available_dates: "2019-08-24",
   price_per_day: "400€",
-  city: "17 avenue de la liberte, 69000 Lyon",
+  city: "Lyon",
   hair_color: "brun",
   user: alex,
   gender: "Femme"
@@ -91,7 +91,7 @@ alice = Escort.new(
   origin: "Caucasien",
   available_dates: "2019-08-24",
   price_per_day: "140€",
-  city: " 47 rue stephenson, 75010 Paris",
+  city: "Paris",
   hair_color: "blond",
   user: alex,
   gender: "Femme"
@@ -106,7 +106,7 @@ remy = Escort.new(
   origin: "Caucasien",
   available_dates: "2019-08-25",
   price_per_day: "400€",
-  city: " 8 avenue des champs elysées, 75001 Paris",
+  city: "Paris",
   hair_color: "blond",
   user: raphael,
   gender: "Homme"
@@ -122,7 +122,7 @@ jules = Escort.new(
   origin: "Caucasien",
   available_dates: "2019-08-25",
   price_per_day: "280€",
-  city: "43 rue gambetta, 69000 Lyon",
+  city: "Lyon",
   hair_color: "blond",
   user: raphael,
   gender: "Homme"
@@ -137,7 +137,7 @@ laure = Escort.new(
   origin: "Caucasien",
   available_dates: "2019-08-24",
   price_per_day: "220€",
-  city: " 2 avenue des saules, 59000 Lille",
+  city: "Lille",
   hair_color: "blond",
   user: alex,
   gender: "Femme"
@@ -152,7 +152,7 @@ marc = Escort.new(
   origin: "Caucasien",
   available_dates: "2019-08-24",
   price_per_day: "250€",
-  city: "39 avenue de la liberté, 69000 Lyon",
+  city: "Lyon",
   hair_color: "blond",
   user: alex,
   gender: "Homme"
@@ -167,7 +167,7 @@ simon = Escort.new(
   origin: "Africain",
   available_dates: "2019-08-24",
   price_per_day: "290",
-  city: " 1 avenue de la liberté, 33000 Bordeaux",
+  city: "Bordeaux",
   hair_color: "brun",
   user: alex,
   gender: "Homme"
@@ -182,7 +182,7 @@ marius = Escort.new(
   origin: "Africain",
   available_dates: "2019-08-25",
   price_per_day: "290",
-  city: " 36 cours du chapeau rouge, 33000 Bordeaux",
+  city: "Bordeaux",
   hair_color: "brun",
   user: raphael,
   gender: "Homme"
@@ -197,7 +197,7 @@ adele = Escort.new(
   origin: "Caucasien",
   available_dates: "2019-08-24",
   price_per_day: "220€",
-  city: "231 rue de la benauge, 33000 Bordeaux",
+  city: "Bordeaux",
   hair_color: "brun",
   user: raphael,
   gender: "Femme"
@@ -212,7 +212,7 @@ adam = Escort.new(
   origin: "Asiatique",
   available_dates: "2019-08-25",
   price_per_day: "250€",
-  city: "23 avenue de la chapelle, 75010 Paris",
+  city: "Paris",
   hair_color: "brun",
   user: raphael,
   gender: "Homme"
@@ -227,7 +227,7 @@ capucine = Escort.new(
   origin: "Caucasien",
   available_dates: "2019-08-24",
   price_per_day: "110€",
-  city: "18 avenue vauban, 59000 Lille",
+  city: "Lille",
   hair_color: "blond",
   user: raphael,
   gender: "Femme"
@@ -242,7 +242,7 @@ simon = Escort.new(
     origin: "Africain",
     available_dates: "2019-08-25",
     price_per_day: "100€",
-    city: " 19 rue ghuesquières, 59000 Lille",
+    city: "Lille",
     hair_color: "brun",
     user: alex,
     gender: "Homme"
@@ -259,7 +259,7 @@ roxane = Escort.new(
   origin: "Africain",
   available_dates: "2019-08-25",
   price_per_day: "280€",
-  city: "1 avenue de la liberté, 33000 Bordeaux",
+  city: "Bordeaux",
   hair_color: "brun",
   user: raphael,
   gender: "Femme"
@@ -276,7 +276,7 @@ blanche = Escort.new(
   origin: "Caucasien",
   available_dates: "2019-08-24",
   price_per_day: "220€",
-  city: "34 avenue de la liberté, 06000 Nice",
+  city: "Nice",
   hair_color: "brun",
   user: alex,
   gender: "Femme"
@@ -291,7 +291,7 @@ octave = Escort.new(
   origin: "Caucasien",
   available_dates: "2019-08-24",
   price_per_day: "180€",
-  city: " 18 rue gambetta, 06000 Nice",
+  city: "Nice",
   hair_color: "blond",
   user: raphael,
   gender: "Homme"
@@ -306,7 +306,7 @@ elise = Escort.new(
   origin: "Caucasien",
   available_dates: "2019-08-25",
   price_per_day: "230€",
-  city: " 15 place de la république, 75010 Paris",
+  city: "Paris",
   hair_color: "blond",
   user: raphael,
   gender: "Femme"
@@ -321,7 +321,7 @@ rose = Escort.new(
   origin: "Caucasien",
   available_dates: "2019-08-25",
   price_per_day: "120€",
-  city: " 2 rue gambetta, 33000 Bordeaux",
+  city: "Bordeaux",
   hair_color: "rousse",
   user: alex,
   gender: "Femme"
@@ -336,7 +336,7 @@ valentin = Escort.new(
   origin: "Asiatique",
   available_dates: "2019-08-24",
   price_per_day: "199€",
-  city: "33 promenade des anglais, 06000 Nice",
+  city: "Nice",
   hair_color: "brun",
   user: raphael,
   gender: "Homme"
@@ -351,7 +351,7 @@ emma = Escort.new(
   origin: "Asiatique",
   available_dates: "2019-08-24",
   price_per_day: "190€",
-  city: " 3 rue bonaparte, 33000 Bordeaux",
+  city: "Bordeaux",
   hair_color: "chatain",
   user: alex,
   gender: "Femme"
