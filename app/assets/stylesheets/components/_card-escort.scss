@@ -4,13 +4,8 @@
   position:relative;
   height: 320px;
   margin-bottom:10px;
-  margin-top:10px;
   background-color: white;
-}
-
-.card-escort:hover {
-  bottom: 4px;
-  filter: brightness(120%);
+  border-radius: 5px;
 }
 
 .card-escort .price {
@@ -18,8 +13,7 @@
   height: 100px;
   width: 100px;
   position: absolute;
-  background: rgb(214,140,1);
-  background: linear-gradient(90deg, #f3c423 0%, #ff9449 100%);
+  background-color: $yellow;
   border: 3px solid white;
   right: 20px;
   top: 175px;
@@ -30,13 +24,26 @@
   font-size:22px;
 }
 
+.face-color {
+  background-color: red;
+  height:250px;
+}
+
 .card-escort .face {
   background-position: top;
   background-size:cover;
   height: 250px;
   position:relative;
+  border-radius: 5px 5px 0 0;
+  transition: 0.5s;
 }
 
+.card-escort .face:hover {
+    background-blend-mode: screen;
+    background-color: rgba(12, 25, 80, 0.7);
+    background-size:cover;
+    background-position: top;
+}
 
 .card-escort .face .infos {
   position:absolute;
@@ -53,6 +60,10 @@
   font-weight: 600;
 }
 
+.card-escort #age, #city {
+  font-size: 14px;
+}
+
 .card-escort .content {
   padding: 30px 20px 10px 20px;
   display: flex;
@@ -60,14 +71,12 @@
   justify-content: start;
 }
 
-
 .card-escort .content .config {
   padding: 3px 8px;
   border-radius: 5px;
   background-color: $bnblue;
   color: $white;
   margin: 0 7px;
-
   font-size: 12px;
 }
 

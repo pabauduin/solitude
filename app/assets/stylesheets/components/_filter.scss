@@ -23,6 +23,11 @@
   }
   .box2 a {
     width:100% !important;
+    max-width:100% !important;
+    margin: 0 !important;
+  }
+  .box2 {
+    margin: 10px 0 0 0 !important;
   }
 }
 
@@ -33,14 +38,15 @@
 
 .box2 {
   margin: 0 20px;
-
   display: flex;
   flex-wrap: wrap;
-
+  flex-basis: 100%;
 }
 
 .box2 a {
   margin: 0 10px;
+  flex-grow:1;
+  max-width:248px;
 }
 
 .filter .form-control::-webkit-input-placeholder {
