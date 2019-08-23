@@ -14,14 +14,15 @@
     </div>
 
 
-  <% if @escorts.first.nil? %>
-  <div class="container-cards">
-    🐻 Aucun buddy n'est disponible pour cette configuration. snif. 🐻
-  </div>
-  <% end %>
+
 
 
 <div class="box2">
+   <% if @escorts.first.nil? %>
+  <div class="container-cards">
+    <div>🐻 Aucun buddy n'est disponible pour cette configuration. snif. 🐻</div>
+  </div>
+  <% end %>
 <% @escorts.each do |escort| %>
     <%= link_to escort_path(escort) do %>
     <div class="card-escort">
