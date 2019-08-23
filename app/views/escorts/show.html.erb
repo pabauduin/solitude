@@ -3,7 +3,7 @@
         <div class="col-12 col-lg-6">
           <div class= "c-show">
             <div>
-             <%= cl_image_tag @escort.photo, alt: "alttext", class: "avatar-large  " %>
+             <%= cl_image_tag @escort.photo,width: 400, height: 300, crop: :thumb, gravity: :face, alt: "alttext", class: "avatar-large  " %>
       <!-- style: "object-fit: cover; height: 200px; width: 400px; border-radius:10px; margin-bottom:10px" -->
              </div>
 
