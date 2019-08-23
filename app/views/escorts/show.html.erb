@@ -1,37 +1,38 @@
 <div class="container">
-      <div class="row">
-        <div class="col-12 col-lg-6">
-          <div class= "c-show">
-            <div>
-             <%= cl_image_tag @escort.photo, alt: "alttext", class: "avatar-large  " %>
-      <!-- style: "object-fit: cover; height: 200px; width: 400px; border-radius:10px; margin-bottom:10px" -->
-             </div>
-
-            <h1 style="display:inline; padding-right:10px;"><%= @escort.name.capitalize %></h1>
-              <p><%= @escort.city %></p>
-
-              <div class= "criteria-title my-3">
-                <p>AGE</p>
-                <p>PRIX</p>
-                <p>TAILLE</p>
-              </div>
-              <div class= "criteria">
-               <p> <%= @escort.age %> ans</p>
-               <p>  <%= @escort.price_per_day %> €/jour</p>
-               <p>  <%= @escort.size %> cm</p>
-              </div>
-            <div class= "reserver"> <%= link_to "RESERVER", escort_bookings_path(@escort), :method => :post, class: "btn-principal"%></div>
+  <div class="attention">
+    <div class="attention-alert">
+      Attention, <%= @escort.name.capitalize %> est un buddy très doux et très attentioné... Réservez-vite !
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 col-lg-6">
+      <div class= "card-show">
+        <div class="top">
+          <div class="face">
+            <%= cl_image_tag @escort.photo, alt: "alttext", class: "avatar-large" %>
           </div>
         </div>
-
+          <div class="bottom">
+            <h1 style="margin-bottom:0;"><%= @escort.name.capitalize %> (<%= @escort.age %> ans)</h1>
+            <div class= "price"><%= @escort.price_per_day %> €/jour</div>
+            <p><%= @escort.city %></p>
+              <div class= "size">Taille : <%= @escort.size %> cm</div>
+              <div class= "size">Cheveux : <%= @escort.hair_color %>s</div>
+              <div class= "size"><%= @escort.origin %></div>
+              <div class= "size">Taille : <%= @escort.size %> cm</div>
+            </div>
+          <% if current_user.user_type == "0" %>
+            <%= link_to "⭐ Réserver", escort_bookings_path(@escort), method: :post, class: "btn-principal" %>
+          <% end %>
+      </div>
+    </div>
     <div class="col-12 col-lg-6">
       <div
         id="map"
         class="no-sticky"
-        style="width: 500px; height: 600px;"
+        style="margin-top: 20px; width: 100%; height: 600px;"
         data-markers="<%= @markers.to_json %>"
         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
       </div>
      <div>
 </div>
-

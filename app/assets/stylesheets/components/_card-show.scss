@@ -1,0 +1,33 @@
+.card-show {
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.card-show .top {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-show .bottom {
+  margin-top:70px;
+  margin-bottom: 30px;
+}
+
+.card-show .face {
+  margin-top: -40px;
+  position: absolute;
+}
+
+
+.card-show .city, .size {
+  font-size: 14px;
+}
+
+.criteria {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
