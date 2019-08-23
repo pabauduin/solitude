@@ -10,6 +10,10 @@
   color: black;
 }
 
+.card-home .form-control:disabled, .form-control[readonly] {
+background-color: white;
+}
+
 .card-home .btn-principal {
   color:white;
 }
